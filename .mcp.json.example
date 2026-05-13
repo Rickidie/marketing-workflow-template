@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "nanobanana": {
+      "command": "uvx",
+      "args": ["nanobanana-mcp-server@latest"],
+      "env": {
+        "GEMINI_API_KEY": "${GEMINI_API_KEY}",
+        "DEFAULT_MODEL_TIER": "flash"
+      }
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["@playwright/mcp@latest"]
+    },
+    "bigquery": {
+      "command": "npx",
+      "args": [
+        "-y", "@ergut/mcp-bigquery-server",
+        "--project-id", "${GCP_PROJECT_ID}",
+        "--key-file", "${BIGQUERY_SA_PATH}"
+      ]
+    }
+  }
+}

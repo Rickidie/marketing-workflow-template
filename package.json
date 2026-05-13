@@ -1,0 +1,31 @@
+{
+  "name": "marketing-workflow-template",
+  "version": "1.0.0",
+  "description": "Open-source GEO/SEO marketing workflow template with AI engine monitoring, content pipeline, and Notion integration.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-github-org/marketing-workflow-template.git"
+  },
+  "keywords": [
+    "geo",
+    "seo",
+    "aeo",
+    "marketing",
+    "ai-monitoring",
+    "content-pipeline",
+    "notion"
+  ],
+  "author": "",
+  "license": "MIT",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/your-github-org/marketing-workflow-template/issues"
+  },
+  "homepage": "https://github.com/your-github-org/marketing-workflow-template#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.5.2"
+  }
+}

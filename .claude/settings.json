@@ -1,0 +1,25 @@
+{
+  "enabledPlugins": {
+    "marketing-skills@marketingskills": true,
+    "nanobanana@opc-skills": true,
+    "twitter@opc-skills": true,
+    "reddit@opc-skills": true,
+    "ecc@ecc": true,
+    "brand-voice@knowledge-work-plugins": true,
+    "data-visualization@knowledge-work-plugins": true,
+    "humanizer@agent-toolkit": true
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path // .tool_response.filePath' | { read -r f; grep -lE \"—|\\\\\\\\rm[^a-z]\" \"$f\" >/dev/null 2>&1 && echo \"WARN: em-dash or bare \\\\rm detected in $f\"; } || true"
+          }
+        ]
+      }
+    ]
+  }
+}

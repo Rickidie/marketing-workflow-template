@@ -1,0 +1,30 @@
+.mcp.json
+.DS_Store
+*.service_account.json
+.worktrees/
+.superpowers/
+
+# Playwright
+.playwright-mcp/
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# Environment and secrets
+.env
+.env.local
+.env.production
+.env.development
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service-account.json
+.secrets/
+secrets/
+sessions/
+*.map
